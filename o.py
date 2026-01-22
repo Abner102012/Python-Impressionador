@@ -1,1 +1,0 @@
-print("@" in "lira@gmail.com")
