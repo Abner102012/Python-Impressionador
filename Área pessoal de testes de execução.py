@@ -1,14 +1,8 @@
-nome = str(input("Digite seu nome: "))
-email = input("Digite seu e-mail: ")
+produtos = ["apple tv", "mac", "iphone x", "Ipad", "apple watch", "mac book", "airpods"]
+print(produtos)
+produtos.append("iphone 11")
 
-print(email.find("@"))
 
-if nome and email:
-    posicao = email.find("@")
-    servidor = email[posicao:]
-    if posicao != -1 and "." in servidor:
-        print("Cadastro concluído!")
-    else:
-       print("Preencha os dados corretamente!")
-else:
-    print("Preencha os dados corretamente!")
+item_removido = produtos.pop(2)
+print(produtos)
+print(f"Removemos o {item_removido} da lista.")
