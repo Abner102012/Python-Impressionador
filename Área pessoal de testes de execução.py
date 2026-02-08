@@ -1,9 +1,13 @@
-vendas_tecnologia = {'iphone': 15000, 'samsung galaxy': 12000, 'tv samsung': 10000, 'ps5': 14300, 'tablet': 1720, 'ipad': 1000, 'tv philco': 2500, 'notebook hp': 1000, 'notebook dell': 17000, 'notebook asus': 2450}
+produtos = ['beb46275','TFA23962','TFA64715','TFA69555','TFA56743','BSA45510','TFA44968','CAR75448','CAR23596','CAR13490','BEB21365','BEB31623','BSA62419','BEB73344','TFA20079','BEB80694','BSA11769','BEB19495','TFA14792','TFA78043','BSA33484','BEB97471','BEB62362','TFA27311','TFA17715','BEB85146','BEB48898','BEB79496','CAR38417','TFA19947','TFA58799','CAR94811','BSA59251','BEB15385','BEB24213','BEB56262','BSA96915','CAR53454','BEB75073']
 
-total_notebooks = 0
-for chave in vendas_tecnologia:
-    if "notebook" in chave:
-        total_notebooks += vendas_tecnologia[chave]
+def alcolico(bebida):
+    bebida = bebida.upper()
+    if "BEB" in bebida:
+        return True
     else:
-        continue
-print(total_notebooks)
+        return False
+
+
+for produto in produtos:
+    if alcolico(produto):
+        print(f"Enviar {produto} para setor de bebidas alcólicas.")
