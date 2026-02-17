@@ -1,0 +1,9 @@
+[MESSAGES CONTROL]
+# Desativamos: 
+# C0114, C0115, C0116 (Docstrings/Comentários)
+# C0103 (Nomes de variáveis curtos como 'i' ou 'x')
+# C0304 (Falta de linha em branco no final do arquivo)
+disable=C0114,C0115,C0116,C0103,C0304,W2402
+
+[FORMAT]
+max-line-length=120
