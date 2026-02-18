@@ -1,10 +1,18 @@
-import time
-import locale
+import numpy as np
+import matplotlib.pyplot as plt
 
-locale.setlocale(locale.LC_TIME, "pt-BR")
+vendas = np.random.randint(1000, 3000, 50)
+meses = np.arange(1, 51)
+plt.figure(1, figsize=(15, 4.5))
+plt.subplot(1,3,1)
+plt.plot(meses, vendas, "-", color='red')
+plt.axis([0, 50, 0, max(vendas)+200])
+plt.xlabel('Meses')
+plt.ylabel("Vendas")
 
-data_atual = time.localtime()
+plt.subplot(1,3,2)
+plt.scatter(meses, vendas)
 
-data_texto  = time.strftime("%A, %d de %B de %Y, %H:%M", data_atual)
-
-print(data_texto.title())
+plt.subplot(1,3,3)
+plt.bar(meses, vendas)
+plt.show()
